@@ -32,13 +32,8 @@
 #include "MeEEPROM.h"
 #include <Wire.h>
 #include <SoftwareSerial.h>
-
-
 /***************************************************************************************************************************/
-
-
 #include <Adafruit_PN532.h>
-
 
 #define PN532_SCK  (3)
 #define PN532_MOSI (4)
@@ -47,10 +42,7 @@
 #define PN532_IRQ   (A13)
 #define PN532_RESET (5)  
 Adafruit_PN532 nfc(PN532_SS);
-
-
 /***************************************************************************************************************************/
-
 //#define DEBUG_INFO
 //#define DEBUG_INFO1
 
@@ -78,24 +70,13 @@ MeEncoderOnBoard Encoder_2(SLOT2);
 MeEncoderOnBoard Encoder_3(SLOT3);
 MeEncoderOnBoard Encoder_4(SLOT4);
 MeLineFollower line(PORT_8);
-
-
-
 /***************************************************************************************************************************/
-
-
-
 #if defined(ARDUINO_ARCH_SAMD)
 // for Zero, output on USB Serial console, remove line below if using programming port to program the Zero!
 // also change #define in Adafruit_PN532.cpp library file
    #define Serial SerialUSB
 #endif
-
-
 /***************************************************************************************************************************/
-
-
-
 typedef struct MeModule
 {
   int16_t device;
@@ -2868,31 +2849,17 @@ void setup()
   BluetoothSource = DATA_SERIAL;
 
 /***************************************************************************************************************************/
-
-
-
-
-  #ifndef ESP8266
+#ifndef ESP8266
     while (!Serial); // for Leonardo/Micro/Zero
   #endif
-
-
-
   nfc.begin();
-
   uint32_t versiondata = nfc.getFirmwareVersion();
   if (! versiondata) {
  //   Serial.print("Didn't find PN53x board");
     while (1); // halt
   }
-
-
  nfc.SAMConfig();
-
-/***************************************************************************************************************************/
-
-
-  
+/***************************************************************************************************************************/  
 }
 
 /**
@@ -3030,26 +2997,13 @@ void loop()
   {
     line_model();
   }
-
-
 /***************************************************************************************************************************/
-
-
 uint8_t success;
   uint8_t uid[] = { 0, 0, 0, 0, 0, 0, 0 };  // Buffer to store the returned UID
   uint8_t uidLength;                        // Length of the UID (4 or 7 bytes depending on ISO14443A card type)
-    
- 
  Serial.print("success: "); Serial.println(success);
-
-
-  success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength);
-  
-  
-  
-
-
-
+ 
+success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength);
   if (success) {
     // Display some basic information about the card
     Serial.println("Found an ISO14443A card");
@@ -3057,9 +3011,8 @@ uint8_t success;
     Serial.print("  UID Value: ");
     nfc.PrintHex(uid, uidLength);
     Serial.println("");
- 
-    if (uidLength == 4)
-    {
+    
+    if (uidLength == 4) {
       // We probably have a Mifare Classic card ... 
       Serial.println("Seems to be a Mifare Classic card (4 byte UID)");
     
@@ -3073,7 +3026,7 @@ uint8_t success;
     // to leave it alone unless you know what you're doing
       success = nfc.mifareclassic_AuthenticateBlock(uid, uidLength, 4, 0, keya);
     
-      if (success)
+     if (success)
       {
         Serial.println("Sector 1 (Blocks 4..7) has been authenticated");
         uint8_t data[16];
@@ -3105,12 +3058,8 @@ uint8_t success;
       {
         Serial.println("Ooops ... authentication failed: Try another key?");
       }
-    }
-
-  
+    } 
 }
-
-
  if (uidLength == 7)
     {
       // We probably have a Mifare Ultralight card ...
@@ -3134,8 +3083,5 @@ uint8_t success;
         Serial.println("Ooops ... unable to read the requested page!?");
       }
     }
-
-
-
-
 }
+/***************************************************************************************************************************/

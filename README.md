@@ -12,6 +12,7 @@ We used the firmware for the MegaPi we got from the [MakeBlock](https://github.c
 The .ino file can be opened in the Arduino IDE.
 * First you need to install the "custom" Makeblock library.
 Go to SKetch -> Include Library -> Add .ZIP Library -> Navigate to the downloaded repo and open Makeblock-Libraries-master.
+![Library](https://github.com/felixgasiaux/Level2_Makerfair2019_robot/blob/master/Images/Screen%20Shot%202020-12-30%20at%2017.33.31.png)
 You also need to install the PN_532 library for the NFC capability.
 To do this go to Sketch -> Include Library -> Manage Libraries  There you search for PN 532 and install the library.
 

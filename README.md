@@ -25,3 +25,9 @@ Upload the file using the Upload Button or Sketch -> Upload
 **Hardware**
 
 The PN_532 is directly connected to the MegaPi via the SPI pins.
+-The MOSI pin from the PN_532 gets connected to the MOSI pin of the MegaPi (SPI pin4)
+-The SS pin from the PN_532 to the Pin A12
+-The MISO pin to MISO pin (Pin 1)
+-The SCK to SCK (pin 3)
+-The rst to RESET (pin 5)
+- The 5V pin gets connected to the 

@@ -39,7 +39,3 @@ The PN_532 is directly connected to the MegaPi via the SPI pins.
 Image provided from [Makeit](https://www.makeit.lu)
 ![PN_532](https://github.com/felixgasiaux/Level2_Makerfair2019_robot/blob/master/Images/fritzing_schematic_TVQHEt1w6d.png)
 
-
-## Use 
-
-Simply open the 

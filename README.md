@@ -1,5 +1,5 @@
 # Level2_Makerfair2019_robot
-The code used in the 2019 Makerfair competitionfrom the team Code Club/Level2
+The code used in the 2019 [Makerfair](https://luxembourg.makerfaire.com) competitionfrom the team Code Club/Level2
 
 The actual Hardware:
 -Makeblock Ultimate 2.0
@@ -33,4 +33,5 @@ The PN_532 is directly connected to the MegaPi via the SPI pins.
 -The 5V pin gets connected to the +Vcc pin (pin2)
 -Gnd gets connected to Gnd (pin 6)
 ![Board view](https://github.com/felixgasiaux/Level2_Makerfair2019_robot/blob/master/Images/MakeBlock-MegaPi-ports_make_it.png)
+Image provided from [Makeit](https://www.makeit.lu)
 ![PN_532](https://github.com/felixgasiaux/Level2_Makerfair2019_robot/blob/master/Images/fritzing_schematic_TVQHEt1w6d.png)

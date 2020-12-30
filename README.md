@@ -32,5 +32,5 @@ The PN_532 is directly connected to the MegaPi via the SPI pins.
 -The rst to RESET (pin 5)
 -The 5V pin gets connected to the +Vcc pin (pin2)
 -Gnd gets connected to Gnd (pin 6)
-
-
+![Board view](https://github.com/felixgasiaux/Level2_Makerfair2019_robot/blob/master/Images/MakeBlock-MegaPi-ports_make_it.png)
+![PN_532](https://github.com/felixgasiaux/Level2_Makerfair2019_robot/blob/master/Images/fritzing_schematic_TVQHEt1w6d.png)

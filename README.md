@@ -30,4 +30,7 @@ The PN_532 is directly connected to the MegaPi via the SPI pins.
 -The MISO pin to MISO pin (Pin 1)
 -The SCK to SCK (pin 3)
 -The rst to RESET (pin 5)
-- The 5V pin gets connected to the 
+-The 5V pin gets connected to the +Vcc pin (pin2)
+-Gnd gets connected to Gnd (pin 6)
+
+

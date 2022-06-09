@@ -1,4 +1,4 @@
-# Level2_Makerfair2019_robot
+# Level2_LYRC_Robot_2019
 The code used in the 2019 [Makerfair](https://luxembourg.makerfaire.com) competitionfrom the team Code Club/Level2
 
 The actual Hardware:
